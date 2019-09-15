@@ -4,6 +4,9 @@
 - [Using the Console](#using-the-console)
 - [Variables](#variables)
 - [Data Types in JavaScript](#data-types-in-javascript)
+- [Type Conversion](#type-conversion)
+- [Numbers & Math Object](#numbers--math-object)
+- [String Methods & Concatenation](#string-methods--concatenation)
 
 ## Intro & File Setup
 
@@ -171,3 +174,123 @@ Reference Data Types are not accessed by the actual (primitve) value, they are a
 - We do not need to specify types
 - Most other languages are statically typed (E.g. Java, C#, C++)
 - There are superets of JavaScript and addons to allow static typing (E.g. TypScript, Flow)
+
+
+## Type Conversion
+
+Type conversion is the process of taking a variable and changing its data type.
+
+### Convert to a String
+
+Two ways to convert data types into strings:
+
+1. `String()` function
+2. `.toString()` method
+
+We can convert the following data types to a string:
+
+- numbers (and expressions)
+- booleans
+- dates
+- arrays
+
+`.length` property only works on Strings and returns the number of characters of the string.
+
+### Convert to a Number
+
+Two ways to convert data types into number:
+
+1. `Number()` function
+2. `parseInt()` & `parseFloat()` methods
+
+We can convert the following data types to a number:
+
+- strings
+- boolean (1 = true, 0 = false)
+- Null (0)
+
+`.tofixed()` property only works on Number and returns the number as a decimal/float number based on the number within the parentheses (if left blank then no decimal point).
+
+`NaN` will returm when we try to convert a string or an array to a number, stands for **Not a Number**
+
+`parseInt()` will return a integer number whereas `parseFloat()` will return a decimal number.
+
+### Type Coercion
+
+**Type coercion** is the process of converting value from one type to another however, JavaScript will do this for us.
+
+This is where we try to convert a data type to another data type; however, we allow JavaScript to do this for us. For example: we try to add a string to a number
+
+
+## Numbers & Math Object
+
+### Basic Math with Numbers
+
+Basic math operators:
+
+- (`+`) Addition
+- (`+`) Subtraction
+- (`+`) Multiplication
+- (`+`) Division
+- (`+`) Modulus
+
+### Math Object
+
+**Math Object** allows us to do math functions such as round a number, find the absolute, powers, generate random numbers etc.
+
+`Math` is an Object that has properties and methods. The Math Object have methods and functions built into the JavaScript language which we can utilise when we call the Math Object.
+
+- **property** is an attribute
+- **method** is a function inside of an object
+
+### Some Math Object properties and methods
+
+- `Math.PI` represents the ratio of the circumference of a circle to its diameter, E.g. `3.141592653589793`
+- `Math.E` or Euler's Numbers represents the base of natural logarithms, E.g.`2.718281828459045`
+- `Math.round()`  returns the value of a number rounded to the nearest integer
+- `Math.ceil()` returns the smallest integer greater than or equal to a given number
+- `Math.floor()` returns the largest integer less than or equal to a given number
+- `Math.sqrt()` returns the square root of a number
+- `Math.abs()` return it's absolute/positive number
+- `Math.pow()` returns the `base` to the `exponent` power, that is, `base`<sup>`exponent`</sup>
+- `Math.min()` returns the lowest-valued number
+- `Math.max()` returns the largest of zero or more numbers
+- `Math.random()` returns a floating-point, pseudo-random number in the range `0–1`
+
+
+## String Methods & Concatenation
+
+### Concatenation
+
+Concatenation allows you to join string variables together, using `+` or `+=` operators.
+
+**Note**: Different data types can be concatenated together, does not necessarily have to be a string data type.
+
+Append means to add onto a variable and not replace it. Use (`+=`) append a variable.
+
+**Note**: Be consistant when using quotes within your code. Use escaping (backslash (`\`)) when using single quotes.
+
+### String Properties & Methods
+
+Similar to Numbers, String has built-in properties and methods, E.g. `.length`, `.toUpperCase()`;
+
+- `.length` indicates the length of a string
+- `.concat()` concatenates the string arguments to the calling string and returns a new string
+- `.toUpperCase` returns the calling string value converted to uppercase
+- `.toLowerCase()` returns the calling string value converted to lower case
+- `.indexOf()` returns the index within the calling String of the first occurrence of the specified value, else will return -1
+- `.lastIndexOf()` returns the index within the calling String object of the last occurrence of the specified value, else  will return -1
+- `.charAt()` returns the character at the specified index in a string
+  - get last char by `.length - 1`
+- `substring()` returns the part of the string between the start and end indexes, or to the end of the string.
+- `slice()` extracts a section of a string and returns it as a new string, without modifying the original string
+  - slice from left to right, E.g. `.slice(-3)`
+  - slice from right to left (negative number = return last x letters from the string)
+- `split()` splits a String into an array of strings by separating the string into substrings, using a specified separator string to determine where to make each split
+- `replace()` returns a new string with some or all matches of a pattern replaced by a replacement
+- `includes()` determines whether one string may be found within another string, returning `true` or `false`
+
+To distinguish a property from a method:
+
+- properties do not have brackets (`()`) at the end, E.g. `.length`
+- methods has brackets (`()`)  at the end, E.g. `.toUpperCase()`
