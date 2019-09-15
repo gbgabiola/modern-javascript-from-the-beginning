@@ -3,6 +3,7 @@
 - [Intro & File Setup](#intro--file-setup)
 - [Using the Console](#using-the-console)
 - [Variables](#variables)
+- [Data Types in JavaScript](#data-types-in-javascript)
 
 ## Intro & File Setup
 
@@ -122,3 +123,51 @@ use `const` unless:
 
 Using `const` lets your program or anyone else who is looking at your code, know that the variable should not be reassigned. It can be mutated if its an array or object, but it cannot be reassigned as a new primitive value. This will make your code more robust, secure and more readable.
 
+
+## Data Types in JavaScript
+
+There are a bunch of different data types but there are _Two Types_ of data types:
+
+- Primitive Data Types
+- Reference Data Types
+
+
+### Primitive Data Types
+
+- Stored directly in the location the variable accesses
+- Stored on the stack , when you access a primitive data type you access it by its actual value
+
+**6 Primitive Data Types**:
+
+1. **String** a sequence of characters
+2. **Number** a number (integers, decimals, floats are all consindered as numbers)
+3. **Boolean** true or false (1 or 0)
+4. **Null** intentional empty value
+5. **Undefined** a variable that has not been assigned a value.
+6. **Symbols** (ES6)
+
+### Reference Data Types
+
+- Objects accessed by reference
+- Objects that are stored on the heap
+- A pointer to a location in memory
+
+The data isn't actually stored in the variable its stored on what is called the heap (to do with dynamically allocated memory - advanced topic to research later on).
+
+Reference Data Types are not accessed by the actual (primitve) value, they are accessed by reference. They are also considered as objects.
+
+**5 Reference Data Types / Objects**:
+
+- **Arrays**
+- **Object Leterals**
+- **Functions**
+- **Dates**
+- Anything else
+
+### Dynamically Typed Language
+
+- Types are associated with values not variables
+- The same variable can hold multiple types (E.g. variable can hold a string then set to a number without any errors or issues)
+- We do not need to specify types
+- Most other languages are statically typed (E.g. Java, C#, C++)
+- There are superets of JavaScript and addons to allow static typing (E.g. TypScript, Flow)
