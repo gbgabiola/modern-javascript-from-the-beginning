@@ -11,6 +11,8 @@
 - [Arrays & Array Methods](#arrays--array-methods)
 - [Object Literals](#object-literals)
 - [Dates & Times](#dates--times)
+- [If Statements & Comparison Operators](#if-statements--comparison-operators)
+- [Switches](#switches)
 
 ## Intro & File Setup
 
@@ -443,3 +445,103 @@ A date is a reference type and therefore seen as an object in JavaScript.
 - `setHours()` sets the hours for a specified date according to local time, and returns the number of milliseconds since January 1, 1970 00:00:00 UTC until the time represented by the updated Date instance
 - `setMinutes()` sets the minutes for a specified date according to local time
 - `setSeconds()` sets the seconds for a specified date according to local time
+
+
+## If Statements & Comparison Operators
+
+### `if...else` Statements
+
+`if` statements executes a statement if a specified condition is true. If the condition is false, another statement can be executed.
+
+```js
+if (condition) {
+  do something
+} else {
+  do something else
+}
+```
+
+`else` clause can be omitted in the `if` statements only when the condition returns `true`.
+
+
+### `else...if` Statements (Nesting)
+
+Multiple `if...else` statements can be nested to create an `else...if` clause to test more than one condition.
+
+```js
+if (condition) {
+  do something
+} else if (condition) {
+  do something else
+} else {
+  do something else
+}
+```
+
+### Comparison Operators
+
+- **Equality** (`==`) converts the operands if they are **not of the same type**, then applies comparison
+- **Inequality** (`!=`) returns true if the operands are not equal
+- **Strict equality** (`===`) returns true if the operands are strictly equal with no type conversion
+- **Strict inequality** (`!==`) returns true if the operands are not equal and/or not of the same type
+
+### Relational Operators
+
+- **Greater than** (`>`) returns true if the left operand is greater than the right operand
+- **Greater than or equal** (`>=`) returns true if the left operand is greater than or equal to the right operand
+- **Less than** (`<`) returns true if the left operand is less than the right operand
+- **Less than or equal** (`<=`) returns true if the left operand is less than or equal to the right operand
+
+**Best Practice**: It is advisable to always test for Value and Type in your comparison condition statements.
+
+### Logical Operators
+
+Logical Operators allows us to test more than one condition in our If/Else If Statements.
+
+- **AND** (`&&`) requires both condition to be `true`
+- **OR** (`||`) requires one condition to be `true`
+
+### Ternary Operators (?)(:)
+
+**Ternary Operators** is used as a shortcut for the if statement
+
+- `if` = question mark (`?`)
+- `else` = colon (`:`)
+
+```js
+condition ? do something : do something else 
+```
+
+### Without Braces
+
+Curly braces (`{...}`) in JavaScript conditionals are optional syntax however, it is highly recommended to use it for readability purposes.
+
+```js
+if (something)
+  do something
+else
+  do something else
+```
+
+
+## Switches
+
+**`switch`** is another way to check conditions just like `if...else` statements and executes statements associated with a `case` clause.
+
+```js
+switch (expression) {
+  case value1:
+    do something;
+    break;
+  case value2:
+    do something;
+    break;
+  default:
+    do something;
+}
+```
+
+- `break` statement in JavaScript allows you to break out of the `switch` statement. If `break` is omitted, then the program will continue to go through all the cases even if it find a match to the condition
+- `default` clause is optional, but if provided, this clause is executed if there is no cases match.
+
+**Note**: It is recommended to use `switch` statements when you have many different cases rather than using else if to nest all the different conditions as switches are better in those situations.
