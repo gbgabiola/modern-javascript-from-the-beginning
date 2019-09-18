@@ -13,6 +13,7 @@
 - [Dates & Times](#dates--times)
 - [If Statements & Comparison Operators](#if-statements--comparison-operators)
 - [Switches](#switches)
+- [Function Declaration & Expressions](#function-declaration--expressions)
 
 ## Intro & File Setup
 
@@ -545,3 +546,89 @@ switch (expression) {
 - `default` clause is optional, but if provided, this clause is executed if there is no cases match.
 
 **Note**: It is recommended to use `switch` statements when you have many different cases rather than using else if to nest all the different conditions as switches are better in those situations.
+
+
+## Function Declaration & Expressions
+
+**Functions** are blocks of code that can be defined and then called on at a later time or in some cases defined and called on at the same time.
+
+There are a different types or ways of writing functions in JavaScript:
+
+- [Function Declaration](#function-declaration)
+- [Function Expressions](#function-expressions)
+- [Immediately Invokable Function Expression (IFFE)](#immediate-invocable-function-expressions-iife)
+- [Property Methods](#property-methods)
+
+### Function Declaration
+
+**Function declaration** is made of `function` keyword, followed by a function name, a list of parameters in a pair of parenthesis (para1, ..., paramN) and a pair of curly braces `{...}` that delimits the body code.
+
+- creates a variable in the current scope with the identifier equal to function name, and this variable holds the function object
+- any code inside the curly braces is the function scope
+- all functions declarations and expressions can take in parameters and pass in the arguments when we call the function
+- When we create a function, all we are doing is declaring a function
+- we have to call the function by calling the function name followed by the parentheses
+- by default, functions return `undefined` so it must have a `return` statement to specifies the value to return
+- ES6 introduces an easier way to set a default value, by passing it as parameters, if we pass anything in the arguments it will override the default values
+
+```js
+function name(param1 = defaultValue, param2 = defaultValue) {
+  ...
+}
+
+greet(Argument1, Argument2); // calling function
+```
+
+### Function Expressions
+
+**Function expression** is determined by a `function` keyword, followed by an optional function name, a list of parameters in a pair of parenthesis (para1, ..., paramN) and a pair of curly braces `{ ... }` that delimits the body code.
+
+- assigned to a variable as an object
+- can be named or anonymous (usually you have a named variable with a anonymous function)
+- create a method on an object
+- can have a variable passed in as an argument and we can set a default value
+- in most cases using declaration and expressions will not make much of a difference, but expressions have more benefits when it comes to hoisting, closured and some advanced features
+
+```js
+const name = function() {...}; // anonymous
+const name = function name() {...}; // named
+```
+
+### Immediate Invocable Function Expressions (IIFE)
+
+**Immediately Invoked Function Expression (IIFE)** is a JavaScript function that runs as soon as it is defined.
+
+- must be put the function within parentheses
+- also add the parentheses at the end of the function to make it run
+- it can also take in parameters which can be in second set of run parentheses
+- IFFEs are very useful when it comes to certain design patterns such as module design pattern
+
+```js
+// Anonymous
+(function() {
+  IIFE code to run;
+})();
+
+// With name and parameter
+(function name(param) {
+  ...
+})(Arguments);
+```
+
+### Property Methods
+
+**Property Method** is a function within an object as opposed to in the global scope
+
+- when a function is put inside of an object it's called a method
+- it is also possible to define functions for an object outside of the object itself
+
+```js
+const name = {
+  method: function() {
+    ...
+  }
+}
+
+name.method = function() {...} // Defining function outside the object
+name.method(); // calling the object's method
+```
