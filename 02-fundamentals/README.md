@@ -10,6 +10,7 @@
 - [Template Literals](#template-literals)
 - [Arrays & Array Methods](#arrays--array-methods)
 - [Object Literals](#object-literals)
+- [Dates & Times](#dates--times)
 
 ## Intro & File Setup
 
@@ -411,3 +412,34 @@ const obj = {
   }
 }
 ```
+
+
+## Dates & Times
+
+`Date` creates a JavaScript `Date` instance that represents a single moment in time. If no parameter/arguments inside the brackets then you will get the today's date and time by default, E.g. Tue Sep 17 2019 18:00:11 GMT+0800
+
+A date is a reference type and therefore seen as an object in JavaScript.
+
+`toUTCString()` converts a date to a string, using the UTC time zone.
+
+### Dates
+
+- `getMonth()` returns the month in the specified date according to local time, as a zero-based value
+- `getDate()` returns the month in the specified date according to local time, as a zero-based value 
+- `getDay()` returns the month in the specified date according to local time, as a zero-based value 
+- `getFullYear()` method returns the year of the specified date according to local time.
+
+### Times
+
+- `getHours()` method returns the hour for the specified date, according to local time
+- `getMinutes()` method returns the minutes in the specified date according to local time
+- `getSeconds()` method returns the seconds in the specified date according to local time
+- `getMilliseconds()` returns the milliseconds in the specified date according to local time
+- `getTime()` returns the numeric value corresponding to the time for the specified date according to universal time
+- `setMonth()` sets the month for a specified date according to the currently set year
+- `setDate()` sets the day of the Date object relative to the beginning of the currently set month
+- `setFullYear()` sets the full year for a specified date according to local time. Returns new timestamp
+- `setTime()` sets the Date object to the time represented by a number of milliseconds since January 1, 1970, 00:00:00 UTC
+- `setHours()` sets the hours for a specified date according to local time, and returns the number of milliseconds since January 1, 1970 00:00:00 UTC until the time represented by the updated Date instance
+- `setMinutes()` sets the minutes for a specified date according to local time
+- `setSeconds()` sets the seconds for a specified date according to local time
