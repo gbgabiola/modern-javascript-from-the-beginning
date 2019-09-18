@@ -14,6 +14,7 @@
 - [If Statements & Comparison Operators](#if-statements--comparison-operators)
 - [Switches](#switches)
 - [Function Declaration & Expressions](#function-declaration--expressions)
+- [General Loops](#general-loops)
 
 ## Intro & File Setup
 
@@ -631,4 +632,128 @@ const name = {
 
 name.method = function() {...} // Defining function outside the object
 name.method(); // calling the object's method
+```
+
+
+## General Loops
+
+**Loop** is a sequence of instructions that is continually repeated until a certain condition is reached, it is also used to run a block of code using different values each time.
+
+There are three most popular general loops in JavaScript (also found in most programming languages):
+
+1. [For Loops](#for-loop)
+2. [While Loops](#while-loop)
+3. [Do While Loops](#do-while-loop)
+
+### Continue & Break Keywords
+
+- `continue` statement terminates execution of the statements in the current iteration of the loop, and continues execution of the loop with the next iteration
+- `break` statement terminates the current iteration or break out of a loop according to the condition you passed in 
+- Note: it is important to understand how to use these keywords within loops and both keywords can be used in all the loops
+
+### For Loop
+
+`for` statement creates a loop that consists of three optional expressions, enclosed in parentheses and separated by semicolons, followed by a statement to be executed in the loop, for loop will keep itering/looping until the condition is no longer true
+
+- initialize a variable
+- set the condition
+- expression, increment/decrement through each iteration, E.g. `i += 1` or `i++`
+
+```js
+for (initialization; condition; expression) {
+  statement
+}
+```
+
+**General rule**: Use a `for` Loop when you know the number of iteration
+
+### While Loop
+
+`while` statement creates a loop that executes a specified statement as long as the test condition evaluates to true. The condition is evaluated before executing the statement.
+
+- initialize a variable outside of the loop
+- set condition in the while parameter
+- expression, increment/decrement for iterations
+
+```js
+initialization;
+
+while (condition) {
+  statement
+  expression;
+}
+```
+   
+**General rule**: Use a While Loop when you dont know (or unclear) the number of iteration.
+
+### Do While Loop
+
+`do...while` will always run once no matter what until the test condition evaluates to `false`.
+
+- initialize a variable outside of the loop
+- expression, increment/decrement inside the do loop for iterations
+- set condition in the while parameter.
+
+```js
+initialization;
+
+do {
+  statement
+  expression;
+} while (condition);
+```
+
+### Looping Through Arrays
+
+Arrays have specific methods for looping through which you should use over the the general loops, but it is possible to use them within Arrays.
+
+Three specific loops for Array/Objects:
+
+1. [forEach()](#foreach-array-loop)
+2. [map()](#map-array-loop)
+3. [for...in()](#for-in-loop)
+
+
+### ForEach Array Loop
+
+`forEach()` executes a provided function once for each array element
+
+- iterator (mandatory)
+- index (optional) to return the index of the array
+- array (optional) to return the whole array
+
+```js
+arr.forEach(function callback(currentValue) {
+    do something //your iterator
+});
+```
+
+### Map Array Loop
+
+`map()` creates a new array with the results of calling a provided function on every element in the calling array.
+
+- iterator (mandatory)
+- index (optional) to return the index of the array
+- array (optional) to return the whole array
+- a new variable can be created to store the new array object
+- it takes a function call back as a parameter
+- each iteration will return a new array object
+
+```js
+var new_array = arr.map(function callback(currentValue) {
+  do something // Return element for new_array
+});
+```
+
+### For In Loop
+
+`for...in` iterates over all non-Symbol, enumerable properties of an object (key value).
+
+- **variable** different property name is assigned to variable on each iteration
+- **object** whose object properties are iterated over.
+- `object[variable]` returns the value from the object keys
+
+```js
+for (variable in object) { ...
+}
 ```
