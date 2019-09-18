@@ -7,6 +7,7 @@
 - [Type Conversion](#type-conversion)
 - [Numbers & Math Object](#numbers--math-object)
 - [String Methods & Concatenation](#string-methods--concatenation)
+- [Template Literals](#template-literals)
 
 ## Intro & File Setup
 
@@ -43,7 +44,7 @@ You can write and execute JavaScript code within the browser console itself
 
 - `alert('Hello World');` displays an alert box with the text Hello in the browser
 - `undefined` means nothing was returned from executed code
-- if you type a number, console will return it. If you type `4 + 4` it will return 8
+- if you type a number, console will return it, ff you type `4 + 4` it will return 8
 - you can select from the DOM by targetting `document` and it will return the HTML document structure
 - what you can do within JavaScript file, can do it within the JavaScript console also
 - when you reload the browser, you code will be gone, it's usually used for debugging/testing JavaScript code before committing it in a JavaScript file
@@ -64,7 +65,7 @@ comments */
 
 ### Console and other functions
 
-- `console.log()` is very useful when testing and debugging codes.
+- `console.log()` is very useful when testing and debugging codes
 - `console.table();` create a table for objects
 - `console.error();` create an error log
 - `consoe.warn();` create a warn log
@@ -111,7 +112,7 @@ Three keywords for declaring a variable in JavaScript
 
 - `const` or constant is a variable that cannot be changed or reassigned a new value
 - when `const` is used for Arrays, Objects and other types of data that are primitive like strings and numbers (i.e things that can change but cannot be reassigned), we are able to change the values
-- cannot reassign the value but we can change/mutate array/object properties.
+- cannot reassign the value but we can change/mutate array/object properties
 - can add/change the array/objects but cannot reassign/re-declare the array or object 
 
 ### Conclusion & Recommendation
@@ -122,7 +123,7 @@ use `const` unless:
 
 1. the value is changing, 
 2. you need to init a variable or 
-3. you are using the variable in a iterator for a loop.
+3. you are using the variable in a iterator for a loop
 
 Using `const` lets your program or anyone else who is looking at your code, know that the variable should not be reassigned. It can be mutated if its an array or object, but it cannot be reassigned as a new primitive value. This will make your code more robust, secure and more readable.
 
@@ -146,7 +147,7 @@ There are a bunch of different data types but there are _Two Types_ of data type
 2. **Number** a number (integers, decimals, floats are all consindered as numbers)
 3. **Boolean** true or false (1 or 0)
 4. **Null** intentional empty value
-5. **Undefined** a variable that has not been assigned a value.
+5. **Undefined** a variable that has not been assigned a value
 6. **Symbols** (ES6)
 
 ### Reference Data Types
@@ -185,7 +186,7 @@ Type conversion is the process of taking a variable and changing its data type.
 Two ways to convert data types into strings:
 
 1. `String()` function
-2. `.toString()` method
+2. `toString()` method
 
 We can convert the following data types to a string:
 
@@ -272,19 +273,19 @@ Append means to add onto a variable and not replace it. Use (`+=`) append a vari
 
 ### String Properties & Methods
 
-Similar to Numbers, String has built-in properties and methods, E.g. `.length`, `.toUpperCase()`;
+Similar to Numbers, String has built-in properties and methods, E.g. `length`, `toUpperCase()`;
 
-- `.length` indicates the length of a string
-- `.concat()` concatenates the string arguments to the calling string and returns a new string
-- `.toUpperCase` returns the calling string value converted to uppercase
-- `.toLowerCase()` returns the calling string value converted to lower case
-- `.indexOf()` returns the index within the calling String of the first occurrence of the specified value, else will return -1
-- `.lastIndexOf()` returns the index within the calling String object of the last occurrence of the specified value, else  will return -1
-- `.charAt()` returns the character at the specified index in a string
-  - get last char by `.length - 1`
-- `substring()` returns the part of the string between the start and end indexes, or to the end of the string.
+- `length` indicates the length of a string
+- `concat()` concatenates the string arguments to the calling string and returns a new string
+- `toUpperCase` returns the calling string value converted to uppercase
+- `toLowerCase()` returns the calling string value converted to lower case
+- `indexOf()` returns the index within the calling String of the first occurrence of the specified value, else will return -1
+- `lastIndexOf()` returns the index within the calling String object of the last occurrence of the specified value, else  will return -1
+- `charAt()` returns the character at the specified index in a string
+  - get last char by `length - 1`
+- `substring()` returns the part of the string between the start and end indexes, or to the end of the string
 - `slice()` extracts a section of a string and returns it as a new string, without modifying the original string
-  - slice from left to right, E.g. `.slice(-3)`
+  - slice from left to right, E.g. `slice(-3)`
   - slice from right to left (negative number = return last x letters from the string)
 - `split()` splits a String into an array of strings by separating the string into substrings, using a specified separator string to determine where to make each split
 - `replace()` returns a new string with some or all matches of a pattern replaced by a replacement
@@ -292,5 +293,22 @@ Similar to Numbers, String has built-in properties and methods, E.g. `.length`, 
 
 To distinguish a property from a method:
 
-- properties do not have brackets (`()`) at the end, E.g. `.length`
-- methods has brackets (`()`)  at the end, E.g. `.toUpperCase()`
+- properties do not have brackets (`()`) at the end, E.g. `length`
+- methods has brackets (`()`)  at the end, E.g. `toUpperCase()`
+
+
+## Template Literals
+
+**Template literals** are string literals allowing embedded expressions. You can use multi-line strings and string interpolation features with them.
+
+Instead of using single (`'`) or double (`"`) quotes we can use back-ticks (`) to indicate a Template Literal. Anything with the back-ticks can be written as normal HTML tags.
+
+To enter a JavaScript variable, we can use the syntax `${variableName}` instead of a bunch of `+`.
+
+We can also add JavaScript:
+
+- Expressions, E.g. `${2 + 2}`
+- Functions, E.g. `${hello()}`
+- Conditionals, E.g. `${age > 30 ? 'Over 30' : 'Under 30'}`
+
+Template Literals (template strings) method allows for easy concatenation of HTML strings and the syntax is more cleaner and readable.
