@@ -8,6 +8,7 @@
 - [Numbers & Math Object](#numbers--math-object)
 - [String Methods & Concatenation](#string-methods--concatenation)
 - [Template Literals](#template-literals)
+- [Arrays & Array Methods](#arrays--array-methods)
 
 ## Intro & File Setup
 
@@ -312,3 +313,42 @@ We can also add JavaScript:
 - Conditionals, E.g. `${age > 30 ? 'Over 30' : 'Under 30'}`
 
 Template Literals (template strings) method allows for easy concatenation of HTML strings and the syntax is more cleaner and readable.
+
+
+## Arrays & Array Methods
+
+### Arrays
+
+Arrays are very important to many programming languages. It allows us to store multiple values in one variable, it can be mutated and iterated through and also used in some complex algorithms.
+
+To create an array object we would insert multiple data within square brackets (`[]`) and this will be seen by JavaScript as an array. Each data within the array is separated by a comma (`,`). 
+
+Two ways to create an array:
+
+1. Create a variable and assign values within the square brackets (`[...]`), E.g. `const varName = [1, 2, 3, 4];`
+2. Using an array constructor to create an array object, E.g. `const variable = new Array(1, 2, 3, 4);`
+
+### Arrays Indexing
+
+JavaScript Arrays are zero indexed, the first element is at  index `0`, and the last elements is at the index equal to the value of array's `length` minus `1`.
+
+```js
+arrName.length - 1;
+```
+
+### Array Propeties & Methods
+
+- `length` returns the number of elements in an Array object
+- `Array.isArray()` returns `true` if a variable is an Array, else it's `false`
+
+### Array Mutation
+
+Arrays are not immutable, meaning that we can insert, delete and change array values.
+
+- `push()` adds one or more elements to the end of an array and returns the new length of the array
+- `unshift()` adds one or more elements to the beginning of an array and returns the new length of the array
+- `pop()` removes the last element from an array and returns that element
+- `shift()` removes the first element from an array and returns that removed element
+- `splice()` changes the contents of an array by removing existing elements and/or adding new elements
+- `reverse()` reverses an array, the first array element becomes the last, and the last array element becomes the first
+- `concat()` is used to merge two or more arrays and does not change the existing arrays, but instead returns a new array
