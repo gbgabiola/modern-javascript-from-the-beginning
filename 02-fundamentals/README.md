@@ -9,6 +9,7 @@
 - [String Methods & Concatenation](#string-methods--concatenation)
 - [Template Literals](#template-literals)
 - [Arrays & Array Methods](#arrays--array-methods)
+- [Object Literals](#object-literals)
 
 ## Intro & File Setup
 
@@ -352,3 +353,61 @@ Arrays are not immutable, meaning that we can insert, delete and change array va
 - `splice()` changes the contents of an array by removing existing elements and/or adding new elements
 - `reverse()` reverses an array, the first array element becomes the last, and the last array element becomes the first
 - `concat()` is used to merge two or more arrays and does not change the existing arrays, but instead returns a new array
+
+
+## Object Literals
+
+Create a variable and place the values within curly braces (`{...}`) which defines the variable as an Object
+
+**Note**: you can add arrays within Objects, embed Objects within Objects and add functions within objects, E.g.
+
+```js
+const obj = {
+  arr: [value, value, value],
+  obj: {
+    obj1: value,
+    obj2: value
+  },
+  Function: function() {...}
+};
+
+// Arrays of Objects
+const arr = [
+  {key: value, lastName: value},
+  {key: value, lastName: value},
+  {key: value, lastName: value}
+];
+```
+
+### Key: Value Pairs
+
+In Object Literals we use what is called Key:Value pairs, E.g.
+
+```js
+const obj = {
+  key: value,
+  key: value
+}
+```
+
+### Methods to Access Value using the Key
+  
+```js
+obj.key; // Method 1: Dot Notation
+obj['key']; // Method 2: Bracket Notation
+```
+
+**Note**: Method 1 Dot Notation is the preferred syntax.
+
+### This keyword
+
+Use `this` keyword inside our functions inside our object,to access the property values within our object, that means `this` relates to the current object
+
+```js
+const obj = {
+  key: value,
+  method() {
+    ...
+  }
+}
+```
