@@ -1,4 +1,4 @@
-# JavaScript Language Fundamentals <!-- omit in toc -->
+# JavaScript Language Fundamentals
 
 - [Intro & File Setup](#intro--file-setup)
 - [Using the Console](#using-the-console)
@@ -16,6 +16,8 @@
 - [Function Declaration & Expressions](#function-declaration--expressions)
 - [General Loops](#general-loops)
 - [A Look At The Window Object](#a-look-at-the-window-object)
+- [Block Scope With Let & Const](#block-scope-with-let--const)
+
 
 ## Intro & File Setup
 
@@ -791,3 +793,13 @@ for (variable in object) { ...
   - `platform` representing the platform of the browser, E.g. Operating System: Windows, Mac or Linux.
   - `vendor` always either "`Google Inc.`", "`Apple Computer, Inc.`", or empty string (in Firefox)
   - `language` represents the preferred language of the user, usually the language of the browser UI.
+
+
+## Block Scope With Let & Const
+
+- **Global Scope** are variables defined outside any function, block, or module scope
+- **Function Scope** means that parameters and variables defined in a function are visible everywhere within the function, but are not visible outside of the function.
+- **Block Scope** is defined with curly braces. It is separated by `{` and `}`
+  - `var` Block Scope variable value (if the variable shares the same name as the Global Scope var variable) will change the Global Scope var variable value
+  - `let` & `const` Block Scope variable value will not affect the Global Scope `let` and `const` variable value (variable with the same name in Global and Block scope)
+  - `let` & `const` have a Block Level Scope whereas `var` has a Function Level Scope.

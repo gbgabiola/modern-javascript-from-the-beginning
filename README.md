@@ -17,9 +17,9 @@ Course Created by Brad Traversy
 
 ## Course Content
 
-- [ ] [Intro & Getting Started](01-introduction)
-- [ ] [JavaScript Language Fundamentals](02-fundamentals#javaScript-language-fundamentals)
-- [ ] [DOM Manipulation & Events]()
+- [x] [Intro & Getting Started](01-introduction)
+- [x] [JavaScript Language Fundamentals](02-fundamentals#javaScript-language-fundamentals)
+- [ ] [DOM Manipulation & Events](03-dom-manipulation--events)
 - [ ] [DOM Projects]()
 - [ ] [Object Oriented JavaScript - ES5 & ES2015]()
 - [ ] [OOP Book List Project]()
