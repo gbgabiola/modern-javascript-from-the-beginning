@@ -15,6 +15,7 @@
 - [Switches](#switches)
 - [Function Declaration & Expressions](#function-declaration--expressions)
 - [General Loops](#general-loops)
+- [A Look At The Window Object](#a-look-at-the-window-object)
 
 ## Intro & File Setup
 
@@ -757,3 +758,36 @@ var new_array = arr.map(function callback(currentValue) {
 for (variable in object) { ...
 }
 ```
+
+
+## A Look At The Window Object
+
+- `document` object is part of the window object as one of its property which returns HTML document object for the window
+- `window` (browser) is the global object in client side JavaScript that represents an open window in a browser
+- Node.js and Chrome browser use the same JavaScript engine called V8 and they both work the same way, it's just in different global environment (Node JS works on your computer whereas Chrome works in the browser window)
+- type `window` then click the arrow in JavaScript console (browser) to see all the parts of the window, E.g. alert method, document, fetch API, localStorage, etc.
+
+### Window Methods / Objects / Properties
+
+- `console.log()` outputs a message to the Web Console
+- `alert()` displays a dialog box on screen with the alert message
+- `prompt()` displays a dialog with on screen that takes an input from the user to input some text
+- `confirm()` displays a modal dialog with an optional message and two buttons, OK and Cancel
+- `outerHeight`, `outerWidth`, `innerHeight` `innerWidth` gets the width/height of the outside of the browser window and viewport
+- `scrollX` & `scrollY` returns the number of pixels that the document is currently scrolled horizontally/vertically
+- `location` returns a Location object with information about the current location of the document
+  - `hostname` contains the domain of the URL.
+  - `port` contains the port number of the URL
+  - `href` contains the whole URL, _redirect_ href by setting another http site so that on refresh it will load/redirect to another webpage
+  - `search` contains a '`?`' followed by the parameters of the URL
+  - `reload()` reloads the current webpage, but use it in a function and not in the global scope which will constantly reload the web page
+- `history` allows manipulation of the browser session history
+  - `go()` loads a page from the session history, identified by its relative location to the current page, E.g. `-1` for the previous page or 1 for the next page calling it without a value reloads the current page
+  - `length` returns a number of elements in the session history, including the currently loaded page
+- `navigator` returns a reference to the Navigator object, which can be queried for information about the application running the script, E.g. Chrome, Safari, Mozilla, Edge etc, it is named after the old Netscape Navigator browser
+  - `appName` is always "`Netscape`", in any browser, unless using IE
+  - `appVersion` returns either "4.0", "5.0" or a string representing version information about the browser
+  - `userAgent` returns the user agent string for the current browser (type of browser being used)
+  - `platform` representing the platform of the browser, E.g. Operating System: Windows, Mac or Linux.
+  - `vendor` always either "`Google Inc.`", "`Apple Computer, Inc.`", or empty string (in Firefox)
+  - `language` represents the preferred language of the user, usually the language of the browser UI.
