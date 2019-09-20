@@ -2,6 +2,7 @@
 
 - [What is the DOM?](#what-is-the-dom)
 - [Examining The Document Object](#examining-the-document-object)
+- [DOM Selectors For Single Elements](#dom-selectors-for-single-elements)
 
 
 ##  What is the DOM?
@@ -63,3 +64,23 @@ By default, you cannot run loops on HTML collections. You must convert them into
 
 - `Array.from()` creates a new, shallow-copied Array instance from an array-like or iterable object
 
+
+## DOM Selectors For Single Elements
+
+DOM Element Selectors are object methods that allow us to pull things from the DOM, manipulate and do different things to the elements or nodes.
+
+**Note**: jQuery is useful for quick simple plugins and/or scripts for specific actions. You should no longer use it for DOM manipulation.
+
+Two types of selectors:
+
+1. **Single Element Selectors** which allows you to grab a single element by its id/class/etc and it can only store one element. If you use a single element that appears more than once in the DOM, it will only grab the single first instance of the element
+2. **Multiple Element Selectors** will grab all the elements with the class and return a HTML collection or a node list depending on which selector you use
+
+Two ways to select single elements:
+
+- `document.getElementById()` returns an Element object representing the element whose id property matches the specified string
+- `document.querySelector()` is newer and much more powerful that returns the first Element within the document that matches the specified selector, or group of selectors
+  - if no matches are found, `null` is returned
+  - works exactly like jQuery and accepts any CSS selectors
+
+**Note**: Target a specific element even if there is more than one in the DOM by using the CSS :first-child/:last-child/:nth-child() sudo element within the querySelector.
