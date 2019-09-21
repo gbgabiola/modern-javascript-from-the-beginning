@@ -4,6 +4,7 @@
 - [Examining The Document Object](#examining-the-document-object)
 - [DOM Selectors For Single Elements](#dom-selectors-for-single-elements)
 - [DOM Selectors For Multiple Elements](#dom-selectors-for-multiple-elements)
+- [Traversing The DOM](#traversing-the-dom)
 
 
 ##  What is the DOM?
@@ -97,3 +98,33 @@ Two ways to select single elements:
 **Note**: `for` loop will work with both HTML Collections and Node Lists (using `length` on a HTML collection and access the item using the index) whereas the `forEach` loop will only work with Array/NodeList and not with HTML Collections.
 
 
+## Traversing The DOM
+
+**Traversing the DOM** is the action of moving up and down the DOM object and dealing with specific parent and children nodes or whatever it is that we select.
+
+There are different properties attached to the document items/nodes and it all depends on whether we select the parent or child of these nodes.
+
+- `childNodes` returns a NodeList of child nodes of the given element, this includes text nodes which represents line breaks within HTML document
+  - `nodeName` returns the name of the current node as a string
+  - `nodeType` represents the type of the node
+  - `nodeType` will return a number for the node selected
+    - 1 = Element
+    - 2 = Attribute (deprecated)
+    - 3 = Text node
+    - 8 = Comment
+    - 9 = Document itself
+    - 10 = Doctype
+- `children` returns a HTMLCollection which contains all of the child elements of the node upon which it was called
+- `firstChild` returns the node's first child in the tree, or null if the node has no children
+- `firstElementChild` returns the object's first child Element, or `null` if there are no child elements
+- `lastChild` returns the last child of the node
+- `lastElementChild` returns the object's last child Element or null if there are no child elements
+- `childElementCount` returns an unsigned long representing the number of child elements of the given element
+- `parentNode` returns the parent of the specified node in the DOM tree
+- `parentElement` returns the DOM node's parent Element, or `null` if the node either has no parent, or its parent isn't a DOM Element
+- `nextSibling` returns the node immediately following the specified one in their parent's childNodes, or returns `null` if the specified node is the last child in the parent element
+- `nextElementSibling` allows us to move down the DOM, from within the element node and we can combine this property to move multiple times down
+- `previousSibling` returns the node immediately preceding the specified one in its parent's childNodes list, or `null` if the specified node is the first in that list
+- `previousElementSibling` allows us to move up the DOM, from within the element node and we can combine this property to move back up the DOM
+
+**Note**: We can combine `nextElementSibling` and `previousElementSibling` to move up and down the element node. Note we can all Traverse up and down Child Nodes using `.nextSibling` and `.previousSibling` (Child Nodes contain other nodes other than elements).
