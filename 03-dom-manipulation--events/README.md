@@ -3,6 +3,7 @@
 - [What is the DOM?](#what-is-the-dom)
 - [Examining The Document Object](#examining-the-document-object)
 - [DOM Selectors For Single Elements](#dom-selectors-for-single-elements)
+- [DOM Selectors For Multiple Elements](#dom-selectors-for-multiple-elements)
 
 
 ##  What is the DOM?
@@ -84,3 +85,15 @@ Two ways to select single elements:
   - works exactly like jQuery and accepts any CSS selectors
 
 **Note**: Target a specific element even if there is more than one in the DOM by using the CSS :first-child/:last-child/:nth-child() sudo element within the querySelector.
+
+
+## DOM Selectors For Multiple Elements
+
+- `document.getElementByClassName()` returns an array-like object of all child elements which have all of the given class names
+- `document.getElementByTagName()` returns an HTMLCollection of elements with the given tag name
+- `querySelectorAll()` returns a static NodeList (not HTML Collection) representing a list of the document's elements that match the specified group of selectors
+  - NodeList counts not just elements but also things like text nodes and it also allows us to do things such as forEach loops and other array methods without having to convert it into an array first
+
+**Note**: `for` loop will work with both HTML Collections and Node Lists (using `length` on a HTML collection and access the item using the index) whereas the `forEach` loop will only work with Array/NodeList and not with HTML Collections.
+
+
