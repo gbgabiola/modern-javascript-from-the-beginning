@@ -6,6 +6,7 @@
 - [DOM Selectors For Multiple Elements](#dom-selectors-for-multiple-elements)
 - [Traversing The DOM](#traversing-the-dom)
 - [Creating Elements](#creating-elements)
+- [Removing & Replacing Elements](#removing--replacing-elements)
 
 
 ##  What is the DOM?
@@ -144,3 +145,37 @@ There are different properties attached to the document items/nodes and it all d
 2. Add an id/classes/attributes to the element (Optional)
 3. Add text Node (& append to element)/innerHTML (Optional)
 4. Append the new element to the DOM as child element node.
+
+
+## Removing & Replacing Elements
+
+### Replace an Element
+
+- Step 1
+  - Create a element using a variable
+  - Add id/class/attributes/textNodes to the element
+- Step 2
+  - Locate the old element we would want to replace and add it to a variable
+  - Get the parent element of the old element and store it in a variable. `.replaceChild()` requires a parent object to call on the method
+- Step 3
+  - Replace the old element with the new element using the `.replaceChild()`
+
+### Remove an Element
+
+- Step 1
+  - Create a variable to store all the elements using `querySelectorAll()`.
+  - Create a variable to store the ul (parent) element of the li element.
+- Step 2
+There are two ways in which we can remove/delete a child element from the DOM.
+  - The first variable in step 1 allows us to select an element using the index, then followed by the `remove()` to remove the element
+  - Alternatively we can use the second variable and remove by child element using the parent and calling on the `removeChild()`, then passing in the first variable with the index as the parameter/argument
+
+### Classes & Attributes
+
+- `replaceChild()` replaces one child node of the specified node with another
+- `remove()` of the DOMTokenList interface removes the specified tokens from the list
+  - will remove the object from the tree it belongs to
+- `removeChild()` will remove a child node from the DOM. Returns removed node
+- `add()` of DOMTokenList interface adds the given token to the list
+- `hasAttribute()` returns a **Boolean** value indicating whether the specified element has the specified attribute or not
+- `removeAttribute()` removes the attribute with the specified name from the element.
