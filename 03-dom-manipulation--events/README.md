@@ -5,6 +5,7 @@
 - [DOM Selectors For Single Elements](#dom-selectors-for-single-elements)
 - [DOM Selectors For Multiple Elements](#dom-selectors-for-multiple-elements)
 - [Traversing The DOM](#traversing-the-dom)
+- [Creating Elements](#creating-elements)
 
 
 ##  What is the DOM?
@@ -128,3 +129,18 @@ There are different properties attached to the document items/nodes and it all d
 - `previousElementSibling` allows us to move up the DOM, from within the element node and we can combine this property to move back up the DOM
 
 **Note**: We can combine `nextElementSibling` and `previousElementSibling` to move up and down the element node. Note we can all Traverse up and down Child Nodes using `.nextSibling` and `.previousSibling` (Child Nodes contain other nodes other than elements).
+
+
+## Creating Elements
+
+- `createElement()` creates the HTML element specified by tagName, or an HTMLUnknownElement if tagName isn't recognized
+- `setAttribute()` sets the value of an attribute on the specified element
+- `appendChild()` adds a node to the end of the list of children of a specified parent node
+- `createTextNode()` creates a new string to be put in the text node 
+
+### Steps in Creating & Appending Elements to the DOM
+
+1. Create an element
+2. Add an id/classes/attributes to the element (Optional)
+3. Add text Node (& append to element)/innerHTML (Optional)
+4. Append the new element to the DOM as child element node.
