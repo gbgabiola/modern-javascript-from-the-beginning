@@ -9,6 +9,7 @@
 - [Removing & Replacing Elements](#removing--replacing-elements)
 - [Event Listeners & The Event Object](#event-listeners--the-event-object)
 - [Mouse Events](#mouse-events)
+- [Keyboard & Input Events](#keyboard--input-events)
 
 
 ##  What is the DOM?
@@ -227,3 +228,27 @@ All event objects are based on the `Event` Object, and inherits all of it's prop
 - `mouseover` is when a pointing device is moved onto the element that has the listener attached or onto one of its children
 - `mouseout` is when is moved off the element that has the listener attached or off one of its children
 - `mousemove` is when pointing device is moved while over an element
+
+
+## Keyboard & Input Events
+
+**KeyboardEvent** describe a user interaction with the keyboard; each event describes a single interaction between the user and a key on the keyboard.
+
+**InputEvent** interface represents an event notifying of editable content change.
+
+### Keyboard Events Types
+
+- `keydown` produce a character value and for keys that do not produce a character value
+- `keyup` fired when a key is released
+- `keypress` produces a character value is pressed down
+- `focus` fired when an element has received focus
+- `blur` fired when an element has lost focus
+- `cut` fired when a selection has been removed from the document and added to the clipboard
+- `paste` fired when a selection has been pasted from the clipboard to the document
+- `input` fired synchronously when the value of an `<input>`, `<select>`, or <textarea>` element is changed
+
+
+### Other Input Field/Forms Events Types
+
+- `submit` is fired when a form is submitted
+- `change` is fired when selected list option is changed
