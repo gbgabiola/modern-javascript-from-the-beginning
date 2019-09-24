@@ -8,6 +8,7 @@
 - [Creating Elements](#creating-elements)
 - [Removing & Replacing Elements](#removing--replacing-elements)
 - [Event Listeners & The Event Object](#event-listeners--the-event-object)
+- [Mouse Events](#mouse-events)
 
 
 ##  What is the DOM?
@@ -210,3 +211,19 @@ All event objects are based on the `Event` Object, and inherits all of it's prop
 - `clientY` & `clientX` are property of the `MouseEvent` interface returns the horizonal/vertical coordinate within the application's client area at which the event occurred
 - `offsetX` & `offsetY` are property of the `MouseEvent` interface provides the offset in the X/Y coordinate of the mouse pointer between that event and the padding edge of the target node
 
+
+## Mouse Events
+
+**MouseEvent** represents events that occur due to the user interacting with a pointing device
+
+### Mouse Events Types
+
+- `click` is when button is pressed and released on a single element
+- `dblclick` is when button is clicked twice on a single element
+- `mousedown` is when button is pressed on an element
+- `mouseup` is when button is released over an element
+- `mouseenter` is when a pointing device is moved over the element that has the listener attached
+- `mouseleave` is when the pointer is moved out of an element that has the listener attached to it
+- `mouseover` is when a pointing device is moved onto the element that has the listener attached or onto one of its children
+- `mouseout` is when is moved off the element that has the listener attached or off one of its children
+- `mousemove` is when pointing device is moved while over an element
