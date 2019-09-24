@@ -7,6 +7,7 @@
 - [Traversing The DOM](#traversing-the-dom)
 - [Creating Elements](#creating-elements)
 - [Removing & Replacing Elements](#removing--replacing-elements)
+- [Event Listeners & The Event Object](#event-listeners--the-event-object)
 
 
 ##  What is the DOM?
@@ -179,3 +180,33 @@ There are two ways in which we can remove/delete a child element from the DOM.
 - `add()` of DOMTokenList interface adds the given token to the list
 - `hasAttribute()` returns a **Boolean** value indicating whether the specified element has the specified attribute or not
 - `removeAttribute()` removes the attribute with the specified name from the element.
+
+
+## Event Listeners & The Event Object
+
+Events listeners & the event object allows us to have interactivity on our web page. We can listen to Events on any elements in the DOM.
+
+- `addEventListener()` sets up a function that will be called whenever the specified event is delivered to the target
+  - usually takes in two parameters, E.g. '`click`' & named or unnamed `function`
+- `preventDefault()` tells the user agent that its default action should not be taken as it normally would be
+
+### Event Listeners
+
+- Step 1
+  - Query Select an element in the DOM we wish to listen to events on
+- Step 2
+  - Add `.addEventListener()` to listen to the element, takes in two parameters
+    1. an event action, and 
+    2. a function
+  - the function can either be an _unnamed_ function or a _named_ function
+
+### The Event Object
+
+All event objects are based on the `Event` Object, and inherits all of it's properties and methods
+
+- `target` returns the element that triggered the event
+- `type` returns a string containing the event's type
+- `timeStamp` returns the time (in milliseconds) at which the event was created
+- `clientY` & `clientX` are property of the `MouseEvent` interface returns the horizonal/vertical coordinate within the application's client area at which the event occurred
+- `offsetX` & `offsetY` are property of the `MouseEvent` interface provides the offset in the X/Y coordinate of the mouse pointer between that event and the padding edge of the target node
+
