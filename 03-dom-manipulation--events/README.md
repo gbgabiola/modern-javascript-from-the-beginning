@@ -10,6 +10,7 @@
 - [Event Listeners & The Event Object](#event-listeners--the-event-object)
 - [Mouse Events](#mouse-events)
 - [Keyboard & Input Events](#keyboard--input-events)
+- [Event Bubbling & Delegation](#event-bubbling--delegation)
 
 
 ##  What is the DOM?
@@ -245,10 +246,19 @@ All event objects are based on the `Event` Object, and inherits all of it's prop
 - `blur` fired when an element has lost focus
 - `cut` fired when a selection has been removed from the document and added to the clipboard
 - `paste` fired when a selection has been pasted from the clipboard to the document
-- `input` fired synchronously when the value of an `<input>`, `<select>`, or <textarea>` element is changed
-
+- `input` fired synchronously when the value of an `<input>`, `<select>`, or `<textarea>` element is changed
 
 ### Other Input Field/Forms Events Types
 
 - `submit` is fired when a form is submitted
 - `change` is fired when selected list option is changed
+
+
+## Event Bubbling & Delegation
+
+**Event Bubbling** is the bubbling up of events through the DOM. When an event occurs in a particular element in the DOM, it will bubble up through its parent.
+
+**Event Delegation** is almost quite the opposite of Event Bubbling. It is where we put the `.addEventListener` on the parent element and use logic/condition on the Event Handler (function) to target the actual child element we would want the event action (e.g., `click`) to be applied/targeted to.
+
+We would use event delegation for situations such as deleting a specific/selected list item (if we do not use event delegation, the event will only apply to the first instance of the list element and not to the other list elements) or when we would want to dynamically insert something into the DOM through JavaScript for example if we insert a new list item that was not there originally when the page loaded, we would then require the use of event delegation.
+
