@@ -11,6 +11,7 @@
 - [Mouse Events](#mouse-events)
 - [Keyboard & Input Events](#keyboard--input-events)
 - [Event Bubbling & Delegation](#event-bubbling--delegation)
+- [Local & Session Storage](#local--session-storage)
 
 
 ##  What is the DOM?
@@ -262,3 +263,28 @@ All event objects are based on the `Event` Object, and inherits all of it's prop
 
 We would use event delegation for situations such as deleting a specific/selected list item (if we do not use event delegation, the event will only apply to the first instance of the list element and not to the other list elements) or when we would want to dynamically insert something into the DOM through JavaScript for example if we insert a new list item that was not there originally when the page loaded, we would then require the use of event delegation.
 
+
+## Local & Session Storage
+
+- `localStorage`/`sessionStorage` API is part of the browser window object
+- we can store key:value pairs into local/session storage, but the value must be a string
+- we can also save arrays and objects by converting them into a string using `JSON.stringify()`
+- to pull the data out of storage we parse it back using the `JSON.parse()`
+
+### Local Storage vs Session Storage
+
+- `localStorage` will stay until you manually clear it out in your settings or in your program
+- `sessionStorage` will go away when the browser is closed (i.e., session ends)
+
+### Local & Session Storage Methods
+
+- key:value pairs are required when storing data
+- `setItem()` will add the key to the storage, or update that key's value if it already exists
+- `getItem()` will return the key's value or null if the key does not exist
+- `removeItem()` will remove the key from the storage if it exists
+- `clear()` will remove all the stored keys/items
+
+### `JSON.Stringify` & `JSON.parse`
+
+- `JSON.stringify()` converts a JavaScript object or value into a JSON string
+- `JSON.parse()` parses a JSON string and converts it into a JavaScript object
