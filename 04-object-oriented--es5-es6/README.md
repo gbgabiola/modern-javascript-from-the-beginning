@@ -2,6 +2,7 @@
 
 - [Constructors & the 'this' Keyword](#constructors--the-this-keyword)
 - [Built In Constructors](#built-in-constructors)
+- [Prototypes Explained](#prototypes-explained)
 
 
 ## Constructors & the 'this' Keyword
@@ -32,3 +33,14 @@ There are other core objects in JavaScript that have constructors as well; howev
 Primitive types such as `Strings`, `Numbers`, `Booleans` etc. can be created as constructor objects instead of primitives. There are more reason for not using constructors instead of primitives compared to the reason for using it: it slows down execution speed, more code, confusing and issues when using operators to compare values.
 
 **Note**: these core object constructor exist in JavaScript but not something you will use often, learning it only to see what is possible in JavaScript for knowledge.
+
+
+## Prototypes Explained
+
+- Each object in JavaScript has a prototype and a prototype is an object in itself
+- All object inherit their properties and methods from their prototypes
+- When dealing with object literals you are inheriting from a prototype called `Object.prototype`
+- When dealing with objects created from a constructor, it is inheriting from a prototype
+- There is something called the prototype chain where you have the constructor prototype but ypu can also go upto the main `Object.prototype`
+
+The `Object.prototype` has its own default functions that we can call such as `hasOwnProperty()`. This will check if an object has its own property.
