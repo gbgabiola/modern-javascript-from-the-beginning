@@ -3,6 +3,7 @@
 - [Constructors & the 'this' Keyword](#constructors--the-this-keyword)
 - [Built In Constructors](#built-in-constructors)
 - [Prototypes Explained](#prototypes-explained)
+- [Prototypal Inheritance](#prototypal-inheritance)
 
 
 ## Constructors & the 'this' Keyword
@@ -44,3 +45,13 @@ Primitive types such as `Strings`, `Numbers`, `Booleans` etc. can be created as 
 - There is something called the prototype chain where you have the constructor prototype but ypu can also go upto the main `Object.prototype`
 
 The `Object.prototype` has its own default functions that we can call such as `hasOwnProperty()`. This will check if an object has its own property.
+
+
+## Prototypal Inheritance
+
+**Prototypal Inheritance** is where one object type inherits from another object type.
+
+- `call()` allows us to call another function from somewhere else in the current context
+- We can override the our prototypes with new prototypes 
+
+**Note**: any new methods on our created object prototype will be accessible to the other object through inheritance.
