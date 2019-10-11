@@ -6,6 +6,7 @@
 - [Prototypal Inheritance](#prototypal-inheritance)
 - [Using Object.create](#using-objectcreate)
 - [ES6 Classes](#es6-classes)
+- [Sub Classes](#sub-classes)
 
 
 ## Constructors & the 'this' Keyword
@@ -92,5 +93,25 @@ static addNumbers(){
 }
 ```
 
-- we do not need to create a variable to use static method, rather we would use the ClassName, followed by the static functionName and passing in any properties for the function, e.g. `Person.addNumbers(1,2)`
+- we do not need to create a variable to use `static` method, rather we would use the ClassName, followed by the static functionName and passing in any properties for the function, e.g. `Person.addNumbers(1,2)`
 - You would generally use static function where you do not use the `this` keyword in the method within the class object because you do not require the properties of the class for the function to work i.e. this is a standalone function
+
+
+## Sub Classes
+ 
+- sub class syntax is the ES6 version of inheritance
+- `extends` keyword is used to create a class as a child of another class
+- if there is a constructor present in the subclass, it needs to first call `super()` before using `this`.
+- `super` keyword is used to access and call functions on object's parent
+
+**Example**:
+
+1. created a `Person` class with properties and methods
+2. then created a `Customer` class which `extends` from the `Person` class, e.g. `class Customer extends Person`
+3. when we instantiate a Customer, since it is extending a Person we want to call the Person constructor and to do this we would use a function called `super()`. We would have to call the parameters from the parent object i.e. `Person` object parameters. Any extra properties in relation to the `Customer` class we will define as normal within the `constructor()` method using the '`this`' keyword
+4. we can also instantiate any methods from the `Person` class even though they are not within the `Customer` class, this is because the `Customer` class `extends` from the `Person` class
+5. we can create `Customer` methods as well (this also includes static methods)
+
+**Note**: we can use `Person` properties and methods in the `Customer` class because we extended `Person` class, but we cannot use `Customer` properties and methods in `Person` (the opposite way round) unless we extend the `Customer` class in the `Person` class. Sub Classes extends one way only.
+
+Please refer to the [codes](07-sub-classes.js).

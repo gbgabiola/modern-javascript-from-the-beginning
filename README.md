@@ -19,9 +19,9 @@ Course Created by Brad Traversy
 
 - [x] [Intro & Getting Started](01-introduction)
 - [x] [JavaScript Language Fundamentals](02-fundamentals#javaScript-language-fundamentals)
-- [ ] [DOM Manipulation & Events](03-dom-manipulation--events)
-- [ ] [DOM Projects]()
-- [ ] [Object Oriented JavaScript - ES5 & ES2015]()
+- [x] [DOM Manipulation & Events](03-dom-manipulation--events##dom-manipulation--events)
+- [x] [DOM Projects](https://genesisgabiola.github.io/sandbox/)
+- [x] [Object Oriented JavaScript - ES5 & ES2015](04-object-oriented--es5-es6#object-oriented-javascript---es5--es2015-es6)
 - [ ] [OOP Book List Project]()
 - [ ] [Asynchronous JavaScript Ajax & Fetch API]()
 - [ ] [API Projects]()
