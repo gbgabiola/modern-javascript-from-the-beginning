@@ -1,17 +1,18 @@
-# Object Oriented JavaScript - ES5 & ES2015
+# Object Oriented JavaScript - ES5 & ES2015 (ES6)
 
 - [Constructors & the 'this' Keyword](#constructors--the-this-keyword)
 - [Built In Constructors](#built-in-constructors)
 - [Prototypes Explained](#prototypes-explained)
 - [Prototypal Inheritance](#prototypal-inheritance)
 - [Using Object.create](#using-objectcreate)
+- [ES6 Classes](#es6-classes)
 
 
 ## Constructors & the 'this' Keyword
 
 Constructors and the 'this' keyword are one of the most fundamental/important subject in OOP (and in any programming language)
 
-**Note**: ES6 is syntactic sugar or a convenient way of writing OOP code similar to programming languages that uses classes, i.e., Java, C# and PHP etc.
+**Note**: ES6 is syntactic sugar or a convenient way of writing OOP code similar to programming languages that uses classes, i.e. Java, C# and PHP etc.
 
 ### Constructors
 
@@ -70,3 +71,26 @@ Steps in using `Object.create`:
 - create a variable to create a new object using the `Object.create()` passing in the parent function
 - add properties to the new object
 - we can also call on the prototype methods on these objects as you normally would do
+
+
+## ES6 Classes
+
+- classes when creating objects is very common with other programming languages i.e. Java, C#, PHP, Python & etc
+- we can create a class, constructors, have methods and properties inside of the class
+- set the constructor and properties for the class and also create the class methods (i.e. object prototypes/functions) all within our class.
+- we can now create a new class based on the ES6 class object by calling new ClassName() and passing in the parameters. We can also call on the Class methods on the new class object
+
+**Note**: under the hood in the JavaScript engine ES6 classes works almost exactly the same way as ES5 Constructors & Prototypes (i.e. you still have the `__proto__` object which has your class constructors and methods). This is why ES6 Classes is considered a syntactic sugar/convenience syntax i.e. its basically changing the way we write them and not the way it operates in the underlying engine/language.
+
+Static Methods - able to use without instantiating an object i.e. we do not need to create an object to use the method.
+
+- If we wanted to add two numbers together we do not need specific object properties i.e. it is a standalone method. To create a static method we would use the '`static`' keyword, e.g.
+
+```js
+static addNumbers(){
+  standalone function;
+}
+```
+
+- we do not need to create a variable to use static method, rather we would use the ClassName, followed by the static functionName and passing in any properties for the function, e.g. `Person.addNumbers(1,2)`
+- You would generally use static function where you do not use the `this` keyword in the method within the class object because you do not require the properties of the class for the function to work i.e. this is a standalone function
