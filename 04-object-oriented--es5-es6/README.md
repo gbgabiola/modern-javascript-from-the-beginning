@@ -4,6 +4,7 @@
 - [Built In Constructors](#built-in-constructors)
 - [Prototypes Explained](#prototypes-explained)
 - [Prototypal Inheritance](#prototypal-inheritance)
+- [Using Object.create](#using-objectcreate)
 
 
 ## Constructors & the 'this' Keyword
@@ -55,3 +56,17 @@ The `Object.prototype` has its own default functions that we can call such as `h
 - We can override the our prototypes with new prototypes 
 
 **Note**: any new methods on our created object prototype will be accessible to the other object through inheritance.
+
+
+## Using Object.create
+
+`Object.create()` creates a new object, using an existing object as the prototype of the newly created object
+
+We can create prototype inside of a parent object and then have different properties with different prototype methods/prototype functions
+
+Steps in using `Object.create`:
+
+- create a parent function that is an object with the different prototype methods
+- create a variable to create a new object using the `Object.create()` passing in the parent function
+- add properties to the new object
+- we can also call on the prototype methods on these objects as you normally would do
